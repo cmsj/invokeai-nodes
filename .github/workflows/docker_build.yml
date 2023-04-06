@@ -39,7 +39,7 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/cmsj/invokeai:latest
+            ghcr.io/cmsj/invokeai-nodes:latest
 
       - name: Delete old images
         uses: actions/delete-package-versions@v4
