@@ -9,6 +9,8 @@ RUN cd / ; wget https://raw.githubusercontent.com/invoke-ai/InvokeAI/main/script
 RUN useradd --no-log-init -m -U appuser
 RUN mkdir -p /data && chown -hR "appuser:appuser" /data
 
+USER appuser
+
 ENV INVOKEAI_ROOT /data
 ENV TRANSFORMERS_CACHE /data/.cache
 ENV INVOKE_MODEL_RECONFIGURE "--yes --default_only"
