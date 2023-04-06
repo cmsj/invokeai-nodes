@@ -2,6 +2,7 @@ FROM invokeai/invokeai
 MAINTAINER Chris Jones <cmsj@tenshu.net>
 
 # Add the script we want
+RUN apt-get install wget
 RUN cd / ; wget https://raw.githubusercontent.com/invoke-ai/InvokeAI/main/scripts/invoke-new.py ; chmod +x invoke-new.py
 RUN useradd --no-log-init -m -U appuser
 RUN mkdir -p /data && chown -hR "appuser:appuser" /data
