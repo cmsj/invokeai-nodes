@@ -8,6 +8,7 @@ RUN apt-get update
 RUN apt-get install wget
 RUN apt-get clean
 RUN rm -rf /var/cache/apt/archives
+RUN pip install python-multipart
 RUN cd / ; wget https://raw.githubusercontent.com/invoke-ai/InvokeAI/main/scripts/invoke-new.py ; chmod +x invoke-new.py
 
 USER appuser
